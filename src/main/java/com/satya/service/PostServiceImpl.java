@@ -25,8 +25,7 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public List<BlogPost> getAllPost() {
-		UserEntity user = (UserEntity) this.session.getAttribute("user");
-		List<BlogPost> posts = this.postDao.getPostByUserId(user.getUserId());
+		List<BlogPost> posts = this.postDao.findAllBlogPosts();
 		return posts;
 	}
 

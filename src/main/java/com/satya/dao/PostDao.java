@@ -8,7 +8,9 @@ import org.springframework.data.repository.query.Param;
 
 import com.satya.entity.BlogPost;
 
-public interface PostDao extends JpaRepository<BlogPost, Integer>{
-	@Query(value="select p from BlogPost p where p.user.userId=:id")
+public interface PostDao extends JpaRepository<BlogPost, Integer> {
+	@Query(value = "select p from BlogPost p where p.user.userId=:id")
 	public List<BlogPost> getPostByUserId(@Param("id") Integer id);
+	@Query(value="select p from BlogPost p")
+	public List<BlogPost> findAllBlogPosts();
 }

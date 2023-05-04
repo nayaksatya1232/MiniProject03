@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
 <meta charset="UTF-8" />
 <title>Blogs</title>
@@ -35,64 +35,15 @@
 		</div>
 	</nav>
 	<div class="container mt-3 mb-3">
-		<div class="card border-secondary mb-3 w-100">
+		<div th:each="post:${posts}" class="card border-secondary mb-3 w-100">
 			<div class="card-header">
 				<h2>
-					<a href="/blog">Header</a>
+					<a href="/blog" th:text="${post.title}"></a>
 				</h2>
-				<h5 class="card-title">Secondary card title</h5>
+				<h5 class="card-title" th:text="${post.description}"></h5>
 			</div>
 			<div class="card-body text-secondary">
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-			</div>
-		</div>
-		<div class="card border-secondary mb-3 w-100">
-			<div class="card-header">
-				<h2>
-					<a href="/blog">Header</a>
-				</h2>
-				<h5 class="card-title">Secondary card title</h5>
-			</div>
-			<div class="card-body text-secondary">
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-			</div>
-		</div>
-		<div class="card border-secondary mb-3 w-100">
-			<div class="card-header">
-				<h2>
-					<a href="/blog">Header</a>
-				</h2>
-				<h5 class="card-title">Secondary card title</h5>
-			</div>
-			<div class="card-body text-secondary">
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-			</div>
-		</div>
-		<div class="card border-secondary mb-3 w-100">
-			<div class="card-header">
-				<h2>
-					<a href="/blog">Header</a>
-				</h2>
-				<h5 class="card-title">Secondary card title</h5>
-			</div>
-			<div class="card-body text-secondary">
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
-			</div>
-		</div>
-		<div class="card border-secondary mb-3 w-100">
-			<div class="card-header">
-				<h2>
-					<a href="/blog">Header</a>
-				</h2>
-				<h5 class="card-title">Secondary card title</h5>
-			</div>
-			<div class="card-body text-secondary">
-				<p class="card-text">Some quick example text to build on the
-					card title and make up the bulk of the card's content.</p>
+				<p class="card-text" th:text="${post.content}"></p>
 			</div>
 		</div>
 	</div>

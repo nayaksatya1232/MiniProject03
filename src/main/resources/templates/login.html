@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top"
+		aria-label="Fourth navbar example">
+
+		<div class="container">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+				aria-controls="navbarsExample04" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarsExample04">
+				<ul class="nav navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item"><a
+						class="nav-link text-secondary fw-bold" aria-current="page"
+						href="/">AllPosts</a></li>
+					<li class="nav-item mb-2"><a href="/signup"><button
+								type="button" class="btn btn-outline-light me-2">Sign-up</button></a></li>
+					<li class="nav-item"><a href="/login"><button
+								type="button" class="btn btn-warning">Login</button></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row mt-5 mb-5 m-auto">
+			<h1 class="text-center">Login Form</h1>
+			<div
+				class="col-lg-5 col-md-8 col-10 m-auto card bg-light px-5 rounded">
+				<form class="row mt-4 g-3" th:action="@{/login}" method="POST"
+					th:object="${loginData}">
+					<div th:unless="${#strings.isEmpty(success)}"
+						class="alert alert-success" role="alert">
+						<span th:text="${success}"></span>
+					</div>
+					<div th:unless="${#strings.isEmpty(failed)}"
+						class="alert alert-danger" role="alert">
+						<span th:text="${failed}"></span>
+					</div>
+					<div class="col-12">
+						<label for="inputEmail4" class="form-label">Email</label> <input
+							th:field="*{email}" type="email" class="form-control"
+							id="inputEmail4">
+					</div>
+					<div class="col-12">
+						<label for="inputPassword4" class="form-label">Password</label> <input
+							th:field="*{pwd}" type="password" class="form-control"
+							id="inputPassword4">
+					</div>
+
+					<div class="d-grid gap-2 col-12 mx-auto mt-4">
+						<input class="btn btn-primary" type="submit" value="Login">
+						<a class="text-muted text-center" href="forgot">Recover
+							password?</a>
+					</div>
+					<div class="d-flex align-items-center justify-content-center pb-4">
+						<p class="mb-0 me-2">Don't have an account?</p>
+						<a href="register" type="button" class="btn btn-outline-primary">Create
+							New</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer class="footer py-3 bg-light me-auto">
+		<div class="container text-center">
+			<span class="mb-3 mb-md-0 text-muted">Copyright © 2023 <a
+				class="text-dark" href="#">SatyaNayak</a>, All rights reserved
+			</span>
+		</div>
+	</footer>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

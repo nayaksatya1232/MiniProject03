@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+<meta charset="ISO-8859-1">
+<title>My Posts</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark"
+		aria-label="Fourth navbar example">
+		<div class="container" th:if="${logged==true}">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+				aria-controls="navbarsExample04" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExample04">
+				<ul class="navbar-nav me-auto mb-2 mb-md-0">
+					<li class="nav-item"><a class="nav-link fw-bold"
+						aria-current="page" href="/">AllPosts</a></li>
+					<li class="nav-item"><a class="nav-link fw-bold"
+						aria-current="page" href="/myposts">MyPosts</a></li>
+					<li class="nav-item"><a class="nav-link fw-bold"
+						href="/comments">Comments</a></li>
+					<li class="nav-item"><a class="nav-link fw-bold  active"
+						href="/newpost">NewPost</a></li>
+				</ul>
+				<a href="/logout"><button class="btn btn-outline-light"
+						type="submit">Logout</button></a>
+			</div>
+		</div>
+		<div class="container" th:if="${logged==false}">
+			<a href="/login"><button
+					class="btn btn-outline-light" type="submit">Login</button></a>
+		</div>
+	</nav>
+	<div class="container" th:if="${logged==true}">
+		<div class="row m-auto">
+			<div class="col-lg-9 card m-auto mt-3 mb-3 p-0">
+				<h3 class="card-header text-center">Create Post</h3>
+				<div class="card-body">
+					<div th:unless="${#strings.isEmpty(success)}"
+						class="alert alert-success" role="alert">
+						<span th:text="${success}"></span>
+					</div>
+					<div th:unless="${#strings.isEmpty(failed)}"
+						class="alert alert-danger" role="alert">
+						<span th:text="${failed}"></span>
+					</div>
+					<form class="row" th:action="@{/addpost}" th:object="${postData}"
+						method="POST">
+						<div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Title</label>
+							<input type="text" class="form-control" th:field="*{title}"
+								id="exampleFormControlInput1" placeholder="Enter Post Title">
+						</div>
+						<div class="mb-3">
+							<label for="exampleFormControlInput1" class="form-label">Short
+								Description</label> <input th:field="*{description}" type="text"
+								class="form-control" id="exampleFormControlInput1"
+								placeholder="Enter Post Short Description">
+						</div>
+						<div class="mb-3">
+							<label for="exampleFormControlTextarea1" class="form-label">Content</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1"
+								rows="3" th:field="*{content}"></textarea>
+						</div>
+						<div class="col-12">
+							<input type="submit" value="Submit" class="btn btn-primary">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

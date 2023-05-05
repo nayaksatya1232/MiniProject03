@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>My Posts</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark"
@@ -18,28 +18,28 @@
 
 			<div class="collapse navbar-collapse" id="navbarsExample04">
 				<ul class="navbar-nav me-auto mb-2 mb-md-0">
-					<li class="nav-item"><a class="nav-link fw-bold"
-						aria-current="page" href="/">AllPosts</a></li>
+					<!-- 		<li class="nav-item"><a class="nav-link fw-bold"
+						aria-current="page" href="/">AllPosts</a></li> -->
 					<li class="nav-item"><a class="nav-link fw-bold"
 						aria-current="page" href="/myposts">MyPosts</a></li>
 					<li class="nav-item"><a class="nav-link fw-bold"
 						href="/comments">Comments</a></li>
 					<li class="nav-item"><a class="nav-link fw-bold  active"
-						href="/newpost">NewPost</a></li>
+						href="/newpost" th:text="${op}"></a></li>
 				</ul>
 				<a href="/logout"><button class="btn btn-outline-light"
 						type="submit">Logout</button></a>
 			</div>
 		</div>
 		<div class="container" th:if="${logged==false}">
-			<a href="/login"><button
-					class="btn btn-outline-light" type="submit">Login</button></a>
+			<a href="/login"><button class="btn btn-outline-light"
+					type="submit">Login</button></a>
 		</div>
 	</nav>
 	<div class="container" th:if="${logged==true}">
 		<div class="row m-auto">
 			<div class="col-lg-9 card m-auto mt-3 mb-3 p-0">
-				<h3 class="card-header text-center">Create Post</h3>
+				<h3 class="card-header text-center" th:text="${op}"></h3>
 				<div class="card-body">
 					<div th:unless="${#strings.isEmpty(success)}"
 						class="alert alert-success" role="alert">
@@ -51,6 +51,7 @@
 					</div>
 					<form class="row" th:action="@{/addpost}" th:object="${postData}"
 						method="POST">
+						<input type="hidden" name="postId" th:value="${postId}">
 						<div class="mb-3">
 							<label for="exampleFormControlInput1" class="form-label">Title</label>
 							<input type="text" class="form-control" th:field="*{title}"
@@ -63,8 +64,8 @@
 								placeholder="Enter Post Short Description">
 						</div>
 						<div class="mb-3">
-							<label for="exampleFormControlTextarea1" class="form-label">Content</label>
-							<textarea class="form-control" id="exampleFormControlTextarea1"
+							<label for="ContentArea" class="form-label">Content</label>
+							<textarea class="form-control" id="ContentArea"
 								rows="3" th:field="*{content}"></textarea>
 						</div>
 						<div class="col-12">
@@ -75,6 +76,15 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="https://cdn.ckeditor.com/ckeditor5/37.1.0/classic/ckeditor.js"></script>
+	<script>
+    	/* ClassicEditor
+        	.create( document.querySelector( '#ContentArea' ) )
+        	.catch( error => {
+            console.error( error );
+        } ); */
+	</script>
 </body>
 </html>

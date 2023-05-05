@@ -18,8 +18,8 @@
 
 			<div class="collapse navbar-collapse" id="navbarsExample04">
 				<ul class="navbar-nav me-auto mb-2 mb-md-0">
-					<li class="nav-item"><a class="nav-link fw-bold"
-						aria-current="page" href="/">AllPosts</a></li>
+					<!-- 			<li class="nav-item"><a class="nav-link fw-bold"
+						aria-current="page" href="/">AllPosts</a></li> -->
 					<li class="nav-item"><a class="nav-link fw-bold"
 						aria-current="page" href="/myposts">MyPosts</a></li>
 					<li class="nav-item"><a class="nav-link fw-bold  active"
@@ -32,8 +32,8 @@
 			</div>
 		</div>
 		<div class="container" th:if="${logged==false}">
-			<a href="/login"><button
-					class="btn btn-outline-light" type="submit">Login</button></a>
+			<a href="/login"><button class="btn btn-outline-light"
+					type="submit">Login</button></a>
 		</div>
 	</nav>
 	<div class="container" th:if="${logged==true}">
@@ -56,7 +56,8 @@
 							<td th:text="${comment.email}"></td>
 							<td th:text="${comment.content}"></td>
 							<td th:text="${comment.creationDate}"></td>
-							<td><a class="btn btn-sm btn-danger">Delete</a></td>
+							<td><a th:href="@{'/dltcomment/'+ ${comment.commentId}}"
+								class="btn btn-sm btn-danger">Delete</a></td>
 						</tr>
 					</tbody>
 				</table>

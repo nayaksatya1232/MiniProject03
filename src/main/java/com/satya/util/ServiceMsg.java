@@ -9,7 +9,10 @@ public enum ServiceMsg {
 	INCORRECT_PWD("Incorrect Password.."),
 	POST_ADDED("Your Post Has Been Successfully Added.."),
 	NOT_LOGGEDIN("Login First To view Your Posts.."),
-	LOGGED_IN("Your Are Logged In..");
+	LOGGED_IN("Your Are Logged In.."),
+	COMMENTED("You Just Commented on This Post.."),
+	POST_UPDATED("Post Updated Successfully.."),
+	POST_DELETED("Post Deletd Successfully..");
 
 	private String msg;
 

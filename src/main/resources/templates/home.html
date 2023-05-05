@@ -38,7 +38,7 @@
 		<div th:each="post:${posts}" class="card border-secondary mb-3 w-100">
 			<div class="card-header">
 				<h2>
-					<a href="/blog" th:text="${post.title}"></a>
+					<a th:href="@{'blog/' + ${post.postId}}" th:text="${post.title}"></a>
 				</h2>
 				<h5 class="card-title" th:text="${post.description}"></h5>
 			</div>

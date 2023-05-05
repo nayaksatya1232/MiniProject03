@@ -6,6 +6,13 @@ This Project provides a simple Blogging Platform for content writers bloggers et
 
 Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap
 
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
 ## Want to Contribute!!!!
 Go to your directory and run follwing command in bash.
 
@@ -55,13 +62,6 @@ All the Pages of the Application
 
 ![Screenshot (75)](https://user-images.githubusercontent.com/104249371/236516759-7dac6ac7-1031-49a9-bf1e-0e2c435f7c14.png)
 
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 

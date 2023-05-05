@@ -9,17 +9,16 @@ Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap
 ## Want to Contribute!!!!
 Go to your directory and run follwing command in bash.
 
-## Ongoing 
+```python
+git clone https://github.com/nayaksatya1232/MiniProject03.git
+```
+## Ongoing Functionalities
 
 1. Paginations of Tables.
 2. Search Functionality.
 3. Password Recovery.
 4. CkEditor Integration.
 
-
-```python
-git clone https://github.com/nayaksatya1232/MiniProject03.git
-```
 
 # Screenshot HomePage
 

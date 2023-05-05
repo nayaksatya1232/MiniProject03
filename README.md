@@ -20,27 +20,27 @@ All the Pages of the Application
 
 ## ScreenShot 02
 
-![Screenshot (61)](https://user-images.githubusercontent.com/104249371/236514292-7c49306e-620d-4efe-a211-ce9921a24a64.png)
+![Screenshot (70)](https://user-images.githubusercontent.com/104249371/236516647-9bc91472-4036-4a47-8938-7432cc588794.png)
 
 ## ScreenShot 03
 
-![Screenshot (63)](https://user-images.githubusercontent.com/104249371/236514372-289b58f5-e4e2-4e66-b833-d94263bb0886.png)
+![Screenshot (71)](https://user-images.githubusercontent.com/104249371/236516673-587408c9-49a4-4b5c-b0b6-1b9c985ac505.png)
 
 ## ScreenShot 04
 
-![Screenshot (64)](https://user-images.githubusercontent.com/104249371/236514458-c98955cd-1508-4df5-8918-acd44fbce8a8.png)
+![Screenshot (72)](https://user-images.githubusercontent.com/104249371/236516700-20e52572-86e7-432b-8a00-e1c36a6a37f8.png)
 
 ## ScreenShot 05
 
-![Screenshot (65)](https://user-images.githubusercontent.com/104249371/236514502-c6a912f6-1770-415b-8209-6789b4a66cf0.png)
+![Screenshot (73)](https://user-images.githubusercontent.com/104249371/236516720-e7c7493c-cb68-456d-a477-ec0d457c7a4c.png)
 
 ## ScreenShot 06
 
-![Screenshot (68)](https://user-images.githubusercontent.com/104249371/236514555-1fad476d-e069-4412-9580-9845d748f45e.png)
+![Screenshot (74)](https://user-images.githubusercontent.com/104249371/236516737-34cd3a71-9239-48f0-8edd-f429fab67f92.png)
 
 ## ScreenShot 07
 
-![Screenshot (66)](https://user-images.githubusercontent.com/104249371/236514593-8ce866be-b0e0-4736-9eb0-481561f160cf.png)
+![Screenshot (75)](https://user-images.githubusercontent.com/104249371/236516759-7dac6ac7-1031-49a9-bf1e-0e2c435f7c14.png)
 
 
 ## Contributing

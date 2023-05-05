@@ -1,16 +1,68 @@
 # MiniProject03
-Spring boot with Data JPA, Thymeleaf etc
-Project on Blogging platform for users.
 
-**Application Screens**
- **ALL blogs**
-![Screenshot (50)](https://user-images.githubusercontent.com/104249371/236290175-29b388cc-605f-4bb6-b9a4-c292cf512d05.png)
+This Project provides a simple Blogging Platform for content writers bloggers etc.
 
-**Registration**
-![Screenshot (51)](https://user-images.githubusercontent.com/104249371/236290321-629987c0-8c9c-4896-8f2b-a7789005313d.png)
-**Login**
-![Screenshot (53)](https://user-images.githubusercontent.com/104249371/236290412-4418f237-2fdf-404f-9f88-29e27ad3d67c.png)
-**User Dashboard**
-![Screenshot (54)](https://user-images.githubusercontent.com/104249371/236290502-c71fbe9b-803c-49b2-b1db-65d8610c91c4.png)
-**Create Psot**
-![Screenshot (56)](https://user-images.githubusercontent.com/104249371/236290579-6574f4f9-2e58-4edf-b66c-18568ba19820.png)
+## Tech Stack
+
+Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## Want to Contribute!!!!
+Go to your directory and run follwing command in bash.
+
+```python
+git clone https://github.com/nayaksatya1232/MiniProject03.git
+```
+## Ongoing Functionalities
+
+1. Paginations of Tables.
+2. Search Functionality.
+3. Password Recovery.
+4. CkEditor Integration.
+
+
+# Screenshot HomePage
+
+All the Pages of the Application
+
+![Screenshot (58)](https://user-images.githubusercontent.com/104249371/236514175-10ffe8ce-6d27-4e99-a068-feb9a485bb2f.png)
+
+
+## Screenshot 01
+
+![Screenshot (76)](https://user-images.githubusercontent.com/104249371/236517207-b88dece6-5b91-4119-9db5-903db30fc051.png)
+
+## ScreenShot 02
+
+![Screenshot (70)](https://user-images.githubusercontent.com/104249371/236516647-9bc91472-4036-4a47-8938-7432cc588794.png)
+
+## ScreenShot 03
+
+![Screenshot (71)](https://user-images.githubusercontent.com/104249371/236516673-587408c9-49a4-4b5c-b0b6-1b9c985ac505.png)
+
+## ScreenShot 04
+
+![Screenshot (72)](https://user-images.githubusercontent.com/104249371/236516700-20e52572-86e7-432b-8a00-e1c36a6a37f8.png)
+
+## ScreenShot 05
+
+![Screenshot (73)](https://user-images.githubusercontent.com/104249371/236516720-e7c7493c-cb68-456d-a477-ec0d457c7a4c.png)
+
+## ScreenShot 06
+
+![Screenshot (74)](https://user-images.githubusercontent.com/104249371/236516737-34cd3a71-9239-48f0-8edd-f429fab67f92.png)
+
+## ScreenShot 07
+
+![Screenshot (75)](https://user-images.githubusercontent.com/104249371/236516759-7dac6ac7-1031-49a9-bf1e-0e2c435f7c14.png)
+
+
+## License
+
+[SATYA](https://github.com/nayaksatya1232)

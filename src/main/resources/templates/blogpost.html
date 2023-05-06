@@ -62,7 +62,7 @@
 					<h6 th:inline="text"><small class="text-primary">[[${comment.email}]]</small></h6>
 				<h6 th:inline="text">Date: [[${comment.creationDate}]]</h6>
 				
-				<p class="lead bg-light p-2" th:text="${comment.content}"></p>
+				<p class="lead bg-light p-2" data-th-utext="${comment.content}"></p>
 			</div>
 		</div>
 	</div>

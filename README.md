@@ -1,10 +1,10 @@
 # MiniProject03
 
-This Project provides a simple Blogging Platform for content writers bloggers etc.
+This Project provides a simple Blogging Platform for content writers & bloggers etc.
 
 ## Tech Stack
 
-Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap
+Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap,JQuery
 
 ## Contributing
 

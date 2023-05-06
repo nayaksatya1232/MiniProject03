@@ -47,7 +47,7 @@
 				<h5 class="card-title" th:text="${post.description}"></h5>
 			</div>
 			<div class="card-body text-secondary">
-				<p class="card-text" th:utext="${post.content}"></p>
+				<p class="card-text" th:inner="text">....madeBy <span class="text-primary">[[${post.user.email}]]</span></p>
 			</div>
 		</div>
 	</div>

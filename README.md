@@ -21,10 +21,8 @@ git clone https://github.com/nayaksatya1232/MiniProject03.git
 ```
 ## Ongoing Functionalities
 
-1. Paginations of Tables.
-2. Search Functionality.
-3. Password Recovery.
-4. CkEditor Integration.
+1. Password Recovery.
+2. CkEditor Integration.
 
 
 # Screenshot HomePage

@@ -22,8 +22,6 @@ git clone https://github.com/nayaksatya1232/MiniProject03.git
 ## Ongoing Functionalities
 
 1. Password Recovery.
-2. CkEditor Integration.
-
 
 # Screenshot HomePage
 

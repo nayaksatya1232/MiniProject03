@@ -94,7 +94,8 @@
 			$('#tb').DataTable({
 				"searching" : false,
 				"paging" : true,
-				"pageLength" : 10
+				"lengthMenu": [ [2, 5, 10, 20, -1], [2, 5,10,20, "All"] ],
+				"pageLength" : 5 
 			});
 			$('#filter').on('keyup', function() {
 				var value = $(this).val().toLowerCase();

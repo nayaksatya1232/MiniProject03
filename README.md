@@ -1,10 +1,10 @@
 # MiniProject03
 
-This Project provides a simple Blogging Platform for content writers bloggers etc.
+This Project provides a simple Blogging Platform for content writers & bloggers etc.
 
 ## Tech Stack
 
-Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap
+Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap,JQuery
 
 ## Contributing
 
@@ -27,36 +27,41 @@ git clone https://github.com/nayaksatya1232/MiniProject03.git
 
 All the Pages of the Application
 
-![Screenshot (58)](https://user-images.githubusercontent.com/104249371/236514175-10ffe8ce-6d27-4e99-a068-feb9a485bb2f.png)
-
+![Screenshot (87)](https://user-images.githubusercontent.com/104249371/236620839-8dc2c9bb-da7f-4cf4-9b7a-159c120fd26f.png)
+# Filter
+![Screenshot (88)](https://user-images.githubusercontent.com/104249371/236620850-4ceb47b0-5c84-4141-9967-49b0456b99fd.png)
 
 ## Screenshot 01
 
-![Screenshot (76)](https://user-images.githubusercontent.com/104249371/236517207-b88dece6-5b91-4119-9db5-903db30fc051.png)
+![Screenshot (82)](https://user-images.githubusercontent.com/104249371/236620873-9ee0eda6-0858-4a9a-af7e-0528eaa353ab.png)
+
+![Screenshot (83)](https://user-images.githubusercontent.com/104249371/236620880-e4557cee-17fd-4e88-80c7-4bc2347a241a.png)
 
 ## ScreenShot 02
 
-![Screenshot (70)](https://user-images.githubusercontent.com/104249371/236516647-9bc91472-4036-4a47-8938-7432cc588794.png)
+![Screenshot (90)](https://user-images.githubusercontent.com/104249371/236620900-68cc7897-1819-461b-b390-b9a49231c290.png)
+
+![Screenshot (91)](https://user-images.githubusercontent.com/104249371/236620907-5b458342-bbe8-4278-9cd5-1e1e46ef9a90.png)
+
 
 ## ScreenShot 03
 
-![Screenshot (71)](https://user-images.githubusercontent.com/104249371/236516673-587408c9-49a4-4b5c-b0b6-1b9c985ac505.png)
+![Screenshot (92)](https://user-images.githubusercontent.com/104249371/236620901-535f3723-8dab-4efc-8fd6-5d483d3c61e9.png)
+
 
 ## ScreenShot 04
 
-![Screenshot (72)](https://user-images.githubusercontent.com/104249371/236516700-20e52572-86e7-432b-8a00-e1c36a6a37f8.png)
+![Screenshot (84)](https://user-images.githubusercontent.com/104249371/236620916-56194b1d-405b-4ccf-a566-c0dc48eef286.png)
+
 
 ## ScreenShot 05
 
-![Screenshot (73)](https://user-images.githubusercontent.com/104249371/236516720-e7c7493c-cb68-456d-a477-ec0d457c7a4c.png)
+![Screenshot (85)](https://user-images.githubusercontent.com/104249371/236620918-23eb248a-af7a-415a-ba28-db7f8f2c22e0.png)
+
 
 ## ScreenShot 06
 
-![Screenshot (74)](https://user-images.githubusercontent.com/104249371/236516737-34cd3a71-9239-48f0-8edd-f429fab67f92.png)
-
-## ScreenShot 07
-
-![Screenshot (75)](https://user-images.githubusercontent.com/104249371/236516759-7dac6ac7-1031-49a9-bf1e-0e2c435f7c14.png)
+![Screenshot (93)](https://user-images.githubusercontent.com/104249371/236620975-a26b13ef-a729-4bf2-a170-408ccd41b1e3.png)
 
 
 ## License

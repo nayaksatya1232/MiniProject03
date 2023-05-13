@@ -5,6 +5,7 @@ This Project provides a simple Blogging Platform for content writers & bloggers 
 ## Tech Stack
 
 Spring Boot,Sping Data JPA,Thymeleaf,Bootstrap,JQuery
+Reviewed using SonarQube
 
 ## Contributing
 
@@ -57,6 +58,8 @@ All the Pages of the Application
 ## ScreenShot 05
 
 ![Screenshot (85)](https://user-images.githubusercontent.com/104249371/236620918-23eb248a-af7a-415a-ba28-db7f8f2c22e0.png)
+
+
 
 
 ## ScreenShot 06

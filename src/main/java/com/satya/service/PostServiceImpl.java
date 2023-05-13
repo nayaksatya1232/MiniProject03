@@ -2,6 +2,7 @@ package com.satya.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,20 +29,21 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public List<BlogPost> getAllPosts() {
-		List<BlogPost> posts = this.postDao.findAllBlogPosts();
-		return posts;
+		return this.postDao.findAllBlogPosts();
 	}
 
 	@Override
 	public List<BlogPost> getMyPosts() {
 		UserEntity user = (UserEntity) session.getAttribute("user");
-		List<BlogPost> posts = this.postDao.getPostByUserId(user.getUserId());
-		return posts;
+		return this.postDao.getPostByUserId(user.getUserId());
 	}
 
 	@Override
 	public BlogPost getPost(Integer postId) {
-		BlogPost post = this.postDao.findById(postId).get();
+		Optional<BlogPost> postOpt = this.postDao.findById(postId);
+		BlogPost post = new BlogPost();
+		if (postOpt.isPresent())
+			post = postOpt.get();
 		return post;
 	}
 
@@ -60,7 +62,11 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public ServiceMsg updatePost(Integer id, PostDto postData) {
-		BlogPost post = this.postDao.findById(id).get();
+		BlogPost post = new BlogPost();
+		Optional<BlogPost> postOpt = this.postDao.findById(id);
+		if (postOpt.isPresent())
+			post = postOpt.get();
+
 		post.setTitle(postData.getTitle());
 		post.setDescription(postData.getDescription());
 		post.setContent(postData.getContent());
@@ -72,7 +78,7 @@ public class PostServiceImpl implements PostService {
 	public List<Comment> getCommentsByUser() {
 		UserEntity user = (UserEntity) this.session.getAttribute("user");
 		List<BlogPost> posts = this.postDao.getPostByUserId(user.getUserId());
-		List<Comment> comments = new ArrayList<Comment>();
+		List<Comment> comments = new ArrayList<>();
 		for (BlogPost post : posts) {
 			comments.addAll(post.getComments());
 		}
@@ -81,7 +87,11 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public ServiceMsg addComment(Integer pid, Comment data) {
-		BlogPost post = this.postDao.findById(pid).get();
+		BlogPost post = new BlogPost();
+		Optional<BlogPost> postOpt = this.postDao.findById(pid);
+		if(postOpt.isPresent()) {
+			post = postOpt.get();
+		}
 		data.setPost(post);
 		this.commentDao.save(data);
 		return ServiceMsg.COMMENTED;

@@ -25,6 +25,12 @@ public class PostController {
 	private PostService postService;
 	@Autowired
 	private UserService userService;
+	
+	private static final String LOGGED = "logged";
+	private static final String POST = "postData";
+	private static final String ADDPOST = "addpost";
+
+
 
 	@GetMapping("/myposts")
 	public String myposts(Model model) {
@@ -33,31 +39,31 @@ public class PostController {
 			List<BlogPost> posts = this.postService.getMyPosts();
 			model.addAttribute("posts", posts);
 		}
-		model.addAttribute("logged", logged);
+		model.addAttribute(LOGGED, logged);
 		return "myposts";
 	}
 
 	@GetMapping("/newpost")
 	public String addpost(Model model) {
 		boolean logged = userService.checkUser();
-		model.addAttribute("logged", logged);
+		model.addAttribute(LOGGED, logged);
 		model.addAttribute("op", "Create Post");
-		model.addAttribute("postData", new PostDto());
-		return "addpost";
+		model.addAttribute(POST, new PostDto());
+		return ADDPOST;
 	}
 
 	@GetMapping("/editpost/{id}")
 	public String editpost(@PathVariable("id") Integer id, Model model) {
 		boolean logged = userService.checkUser();
 		BlogPost post = new BlogPost();
-		if (logged != false) {
+		if (logged) {
 			post = this.postService.getPost(id);
 		}
-		model.addAttribute("logged", logged);
+		model.addAttribute(LOGGED, logged);
 		model.addAttribute("op", "Edit Post");
 		model.addAttribute("postId", id);
-		model.addAttribute("postData", post);
-		return "addpost";
+		model.addAttribute(POST, post);
+		return ADDPOST;
 	}
 
 	@PostMapping("/addpost")
@@ -75,10 +81,10 @@ public class PostController {
 			model.addAttribute("success", status.getMsg());
 		} else
 			model.addAttribute("failed", status.getMsg());
-		model.addAttribute("logged", true);
+		model.addAttribute(LOGGED, true);
 		model.addAttribute("op", "Edit Post");
-		model.addAttribute("postData", new PostDto());
-		return "addpost";
+		model.addAttribute(POST, new PostDto());
+		return ADDPOST;
 	}
 
 	@GetMapping("/delete/{id}")
@@ -96,14 +102,14 @@ public class PostController {
 			List<Comment> comments = this.postService.getCommentsByUser();
 			model.addAttribute("comments", comments);
 		}
-		model.addAttribute("logged", logged);
+		model.addAttribute(LOGGED, logged);
 		return "comments";
 	}
 
 	@PostMapping("/addcomment")
 	public String addComment(@ModelAttribute("commentData") Comment data, HttpServletRequest req, Model model) {
 		int pid = Integer.parseInt(req.getParameter("pid"));
-		ServiceMsg status = this.postService.addComment(pid, data);
+		this.postService.addComment(pid, data);
 		return "redirect:/blog/" + pid;
 	}
 	@GetMapping("/dltcomment/{id}")

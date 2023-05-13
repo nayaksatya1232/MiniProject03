@@ -55,9 +55,7 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public boolean checkUser() {
-		if (session.getAttribute("user") == null)
-			return false;
-		return true;
+		return session.getAttribute("user") != null;
 	}
 
 	@Override
